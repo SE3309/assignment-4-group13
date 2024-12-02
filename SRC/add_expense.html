@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Add New Expense</h1>
+    <form method="POST" action="{{ url_for('add_expense') }}">
+        <label for="category">Expense Category:</label>
+        <input type="text" id="category" name="category" required>
+        <label for="date">Date of Expense:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="expense_paid">Expense Paid:</label>
+        <input type="number" id="expense_paid" name="expense_paid" required>
+        <label for="total_expense">Total Expense:</label>
+        <input type="number" id="total_expense" name="total_expense" required>
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" name="user_id" required>
+        <button type="submit">Add Expense</button>
+    </form>
+    
+    
+
+    <br>
+    <a href="/">Go back</a>
+</body>
+</html>

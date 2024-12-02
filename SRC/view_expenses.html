@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Expenses</title>
+</head>
+<body>
+    <h1>All Expenses</h1>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Expense Paid</th>
+            <th>Total Expense</th>
+            <th>User ID</th>
+        </tr>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense.ExpenseCategory }}</td>
+            <td>{{ expense.DateOfExpense }}</td>
+            <td>{{ expense.ExpensePaid }}</td>
+            <td>{{ expense.TotalExpense }}</td>
+            <td>{{ expense.UserID }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
